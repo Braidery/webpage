@@ -72,16 +72,16 @@ export default function Home() {
               >
                 BRAIDERY
               </a>{' '}
-              is not just an app; it's a revolution in hair care. Designed to
-              connect you with professional hair braiders in your area, BRAIDERY
-              offers a unique platform for both clients and braiders.
+              is not just an app; it's a comprehensive hair care platform designed to 
+              connect individuals with expert braiders and hair care professionals, while also providing personalized hair care routine and recommendations tools.
+              It’s a one-stop solution for everything hair-related.
             </p>
             {/* Additional text content can be added here */}
           </div>
         </div>
 
         {/* Flex container for text and image */}
-        <div className="flex w-full flex-col md:flex-row items-center justify-center mt-36">
+        <div className="flex w-full flex-col md:flex-row items-center mt-36">
           {/* Text Section */}
           <div className="w-full md:w-1/2 md:pr-8">
             <p className="text-xl text-gray-30">
@@ -111,48 +111,42 @@ export default function Home() {
         
 
         {/* Why BRAIDERY Section */}
-        <section className="py-12 px-4 mt-16 bg-gray rounded-xl shadow-md">
+        {/* Why BRAIDERY Section */}
+       {/*<section className="py-12 px-4 mt-16 bg-gray rounded-xl shadow-md">
+          {/* This section can be used for additional content or features 
+        </section>*/}
           <div className="max-w-6xl mx-auto">
             <h3 className="text-3xl font-bold text-brown-90 text-center mt-8 mb-8">
-              Why BRAIDERY?
+            
+              Why{' '}
+              <a
+                href="#"
+                className="text-brown-50 font-semibold hover:text-orange-50 transition-colors duration-300"
+              >
+                BRAIDERY
+              </a>?
             </h3>
             <p className="text-lg text-gray-50 leading-relaxed">
-              <strong>Find a Braider Near You:</strong> Discover skilled braiders
-              in your vicinity with just a few taps. Our location-based service
-              ensures you're matched with the best in your area.
-            </p>
-            <p className="text-lg text-gray-50 mt-4 leading-relaxed">
-              <strong>Braider Branding & Marketplace:</strong> For braiders,
-              BRAIDERY is not just about booking appointments. It's about
-              building your brand. Sell your signature hair care products, from
-              creams to treatments, and grow your business like never before.
-            </p>
-            <p className="text-lg text-gray-50 mt-4 leading-relaxed">
-              <strong>Manage Your Hair Routine:</strong> Dive into a personalized
-              hair care routine, supported by expert advice and tailored product
-              recommendations. BRAIDERY is your partner in achieving your hair
-              goals.
+              <strong>Braidery</strong> is a comprehensive hair care platform designed to connect individuals with expert braiders and hair care professionals, while also providing personalized hair care recommendations and tools. It’s a one-stop solution for everything hair-related, offering features that help users:
             </p>
 
-            <ul className="list-disc space-y-2 mt-6 ml-5 text-gray-30">
-              <li>
-                Clients can effortlessly find and book hair braiding services,
-                tailored to their specific needs and location.
-              </li>
-              <li>
-                Hair care professionals can showcase their brand, share their
-                portfolio, and reach a wider audience eager for their expertise.
-              </li>
-              <li>
-                Everyone can enjoy a marketplace brimming with quality hair care
-                products—from essential hair creams to everything you need for
-                your hair routine.
-              </li>
-            </ul>
-          </div>
-        </section>
+<ul className="list-disc space-y-2 mt-6 ml-5 text-gray-30">
+  <li><strong>Find Braiders Nearby:</strong> Easily discover professional braiders and salons in your area, view their portfolios, check availability, and book appointments.</li>
+  
+  <li><strong>Try New Styles:</strong> Explore a variety of braiding and hairstyle options, get inspiration, and virtually try on styles to see what works for you before committing.</li>
+  
+  <li><strong>AI-Powered Recommendations:</strong> Receive personalized hair care product and style suggestions based on your unique hair type, condition, and goals (such as length or scalp health).</li>
+  
+  <li><strong>Hair Routine Management:</strong> Build and manage a personalized hair care routine, set goals, track progress, and get reminders to help you stay on top of your regimen.</li>
+  
+  <li><strong>Showcase for Braiders:</strong> Braiders can create profiles, showcase their best work, provide hair care advice, and connect with clients looking for their services.</li>
+  
+  <li><strong>Small Business Integration:</strong> Small businesses can launch their stores within the app, selling hair care products like extensions, oils, and treatments, with AI-driven product recommendations to help users achieve their hair goals.</li>
+</ul>
 
-        
+<p className="text-lg text-gray-50 mt-4 leading-relaxed">
+  Overall, <strong>Braidery</strong> is your everyday companion for maintaining healthy, beautiful hair through easy access to services, products, and personalized care.
+</p>   
 
         {/* Stay Tuned Section */}
         <div className="flex w-full flex-col md:flex-row items-center justify-center mt-36">
@@ -196,12 +190,20 @@ export default function Home() {
         </div>
 
         {/* Additional content can go here */}
+      </div>
       </main>
 
       {/* Footer */}
       <footer className="flex h-24 w-full items-center justify-center border-t mt-16">
         <p className="text-gray-30">
-          &copy; {new Date().getFullYear()} BRAIDERY / Sandrine Cyuzuzo Gamman. All rights reserved.
+          &copy; {new Date().getFullYear()}
+          {' '}
+          <a
+                href="#"
+                className="text-brown-50 font-semibold hover:text-orange-50 transition-colors duration-300"
+              >
+                BRAIDERY
+              </a>/ Sandrine Cyuzuzo Gamman. All rights reserved.
         </p>
       </footer>
     </div>
