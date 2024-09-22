@@ -1,5 +1,12 @@
 
 # Variables
+variable "tenant_id" {
+
+  description = "The Tenant ID for Azure"
+
+  type        = string
+
+}
 variable "location" {
   description = "Azure region to deploy resources"
   default     = "norwayeast"
@@ -22,5 +29,12 @@ variable "azure_devops_project_name" {
 
 variable "azure_devops_repo_name" {
   description = "The name of your Azure DevOps repository"
-  default =     "https://dev.azure.com/FrueScGamman/_git/braidery"
+  default =     "https://dev.azure.com/FrueScGamman/_git/webpage"
+}
+variable "service_principal_object_id" {
+
+  description = "The object ID of the service principal"
+
+  type        = string
+
 }

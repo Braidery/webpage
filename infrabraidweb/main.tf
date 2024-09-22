@@ -33,6 +33,15 @@ data "azuredevops_git_repository" "existing_repo" {
 }
 
 # Key Vault
+resource "azurerm_key_vault_access_policy" "pipeline" {
+  key_vault_id = azurerm_key_vault.braidery.id
+  tenant_id    = var.tenant_id
+  object_id    = var.service_principal_object_id
+
+  secret_permissions = ["get", "list"]
+  certificate_permissions = ["get", "list"]
+}
+
 resource "azurerm_key_vault" "braidery" {
   name                = "braidery-keyvault"
   location            = azurerm_resource_group.braidery.location
