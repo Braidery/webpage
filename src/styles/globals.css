@@ -1,0 +1,8 @@
+/* src/app/globals.css */
+
+@import './tailwind.css';
+
+/* Additional global styles */
+body {
+  font-family: 'Montserrat', sans-serif;
+}
