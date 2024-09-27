@@ -8,7 +8,7 @@ import Footer from '../components/ui/footer';
 
 export default function LandingPage() {
   return (
-    <div className="min-h-screen bg-[#FDF6E9]">
+    <div className="min-h-screen">
       <Hero />
       <About />
       <WhyBraidery />
