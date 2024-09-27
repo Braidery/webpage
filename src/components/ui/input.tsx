@@ -1,16 +1,27 @@
-// src/components/ui/input.tsx
+import { InputHTMLAttributes, forwardRef } from "react";
+import clsx from "clsx";
 
-"use client";
+interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
+  error?: string;
+}
 
-import React from 'react';
-
-interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {}
-
-export const Input: React.FC<InputProps> = ({ className, ...props }) => {
+const Input = forwardRef<HTMLInputElement, InputProps>(({ className, error, ...props }, ref) => {
   return (
-    <input
-      {...props}
-      className={`w-full px-4 py-2 border border-gray-20 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary ${className}`}
-    />
+    <div className="w-full">
+      <input
+        ref={ref}
+        className={clsx(
+          "w-full px-6 py-3 rounded-l-full border-none bg-transparent text-gray-800 placeholder-gray-500 focus:ring-0",
+          error ? "border-red-500" : "border-gray-300",
+          className
+        )}
+        {...props}
+      />
+      {error && <p className="text-sm text-red-500 mt-1">{error}</p>}
+    </div>
   );
-};
+});
+
+Input.displayName = "Input";
+
+export default Input;

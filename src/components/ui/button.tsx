@@ -1,20 +1,28 @@
-// src/components/ui/button.tsx
+import { ButtonHTMLAttributes, forwardRef } from "react";
 
-"use client";
-import React from 'react';
+import clsx from "clsx";
 
-interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  children: React.ReactNode;
-  className?: string;
-}
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {}
 
-export const Button: React.FC<ButtonProps> = ({ children, className = '', ...props }) => {
-  return (
-    <button
-      {...props}
-      className={`px-6 py-3 bg-peach-300 text-white font-semibold rounded-full shadow-md hover:bg-peach-400 dark:bg-darkButton dark:hover:bg-gray-700 transition-colors duration-300 ${className}`}
-    >
-      {children}
-    </button>
-  );
-};
+const Button = forwardRef<HTMLButtonElement, ButtonProps>(
+  ({ className, ...props }, ref) => {
+    return (
+      <button
+        ref={ref}
+        className={clsx(
+          "rounded-full px-4 py-2 md:px-6 md:py-3 bg-[#ECAB88] hover:bg-[#E09A77] text-white transition-all hover:scale-105",
+          "sm:text-sm",
+          "lg:text-lg",
+          "xl:text-xl",
+          "2xl:text-2xl",
+          className
+        )}
+        {...props}
+      />
+    );
+  }
+);
+
+Button.displayName = "Button";
+
+export default Button;
