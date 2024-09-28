@@ -23,7 +23,7 @@ const NavBar = () => {
   }, []);
 
   return (
-    <div className={`${scrolled && 'bg-[#FFF6E5] bg-opacity-100'} ${!scrolled && 'bg-white bg-opacity-0 border-none'} w-full z-50 fixed`} >
+    <div className={`${scrolled && 'hero bg-opacity-100'} ${!scrolled && 'bg-white bg-opacity-0 border-none'} w-full z-50 fixed`} >
       <nav className="flex flex-col md:flex-row max-w-[1350px] mx-auto justify-between items-center bg-cream px-3 py-4 md:px-10 md:py-6">
         {/* Logo */}
         <div className="flex justify-between items-center w-full md:w-auto">
