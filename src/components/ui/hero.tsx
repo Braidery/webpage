@@ -1,5 +1,24 @@
+"use client"; 
+
+
 import Image from "next/image";
 import EmailForm from "@/components/ui/EmailForm"; // Import the EmailForm component
+// Import React hook and Firebase Analytics
+import { useEffect } from 'react';
+import { analytics } from '@/utils/firebase'; // Import Firebase analytics
+
+const LandingPage = () => {
+  useEffect(() => {
+    if (typeof window !== 'undefined' && analytics) {
+      // Analytics should only run in the client-side environment
+      console.log('Firebase Analytics initialized');
+      // You can also log custom events here
+    }
+  }, []);
+};
+
+
+
 
 export default function Hero() {
   return (

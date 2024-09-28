@@ -1,5 +1,8 @@
+// src/components/ui/EmailForm.tsx
+"use client"; 
+
 import { useState, FormEvent } from 'react';
-import { db } from '@/utils/firebase'; // Import Firestore
+import { db } from '@/utils/firebase';
 import { addDoc, collection } from 'firebase/firestore';
 
 const EmailForm: React.FC = () => {
@@ -15,7 +18,7 @@ const EmailForm: React.FC = () => {
         return;
       }
 
-      // Add the email to the Firestore collection
+      // Add the email to Firestore
       await addDoc(collection(db, 'emails'), { email });
 
       setMessage('Email submitted successfully!');
@@ -27,7 +30,6 @@ const EmailForm: React.FC = () => {
   };
 
   const validateEmail = (email: string) => {
-    // Simple regex for email validation
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   };
 
