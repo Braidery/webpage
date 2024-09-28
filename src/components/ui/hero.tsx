@@ -5,7 +5,7 @@ import Button from "@/components/ui/button";
 export default function Hero() {
   return (
     <section className=" hero">
-      <div className="flex flex-col  max-w-[1350px] md:mx-auto md:flex-row items-center md:gap-8 py-24 md:py-12 md:px-12">
+      <div className="flex flex-col  max-w-[1350px] md:mx-auto md:flex-row items-center md:gap-8 py-24 md:py-12 px-8 md:px-12">
         <div className="mb-8 md:mb-0 z-10">
           <a
             href="#"
