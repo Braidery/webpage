@@ -40,7 +40,7 @@ export default function WhyBraidery() {
       </ul>
       </div>
       <div className="md:block hidden">
-        <Image src="/homescreen.jpeg" alt="App feature" width={340} height={100} className="mx-auto" />
+        <Image src="/welcome.png" alt="App feature" width={340} height={100} className="mx-auto" />
       </div>
       </div>
      

@@ -28,7 +28,7 @@ const NavBar = () => {
         {/* Logo */}
         <div className="flex justify-between items-center w-full md:w-auto">
           <Image
-            src="/logo.png"
+            src="/braiderylogo-removebg-preview.png"
             alt="Braidery Logo"
             className="object-fill"
             width={90}
