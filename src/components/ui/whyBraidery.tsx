@@ -6,7 +6,9 @@ export default function WhyBraidery() {
       <div className='mb-6'>
       <h2 className=" text-[30px] md:text-[70px] font-bold mb-6">Why <span className="text-[#E6A97D]">BRAIDERY</span> ?</h2>
         <p className="text-[#18181B] text-[24px] md:text-[36px] font-extralight mb-8">
-          BRAIDERY is a comprehensive hair care platform designed to connect individuals with expert braiders and hair care professionals, while also providing personalized hair care recommendations and tools. It’s a one-stop solution for everything hair-related.
+        Braidery helps you build a fun, personalized hair regimen with the power of AI, guiding you step by step to reach your hair goals. Whether it’s tracking progress, recommending products, or offering quick style tips,
+        Braidery makes managing your hair enjoyable and easy.
+        Plus, with seamless braider bookings and automatic product refills, your hair routine is always on track and hassle-free!
         </p>
       </div>
       <div className='grid lg:grid-cols-2 max-w-6xl mx-auto'>
