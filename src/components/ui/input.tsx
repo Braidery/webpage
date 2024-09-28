@@ -9,6 +9,11 @@ const Input = forwardRef<HTMLInputElement, InputProps>(({ className, error, ...p
   return (
     <div className="w-full">
       <input
+
+
+
+
+
         ref={ref}
         className={clsx(
           "w-full px-6 py-3 rounded-l-full border-none bg-transparent text-gray-800 placeholder-gray-500 focus:ring-0",

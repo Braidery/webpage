@@ -1,11 +1,9 @@
 import Image from "next/image";
-import Input from "@/components/ui/input";
-import Button from "@/components/ui/button";
-
+import React from "react";
 export default function Hero() {
   return (
     <section className=" hero">
-      <div className="flex flex-col  max-w-[1350px] md:mx-auto md:flex-row items-center md:gap-8 py-24 md:py-12 px-8 md:px-12">
+      <div className="flex flex-col  max-w-[1350px] md:mx-auto md:flex-row items-center md:gap-8 py-24 md:py-12 px-8 md:px-4">
         <div className="mb-8 md:mb-0 z-10">
           <a
             href="#"
@@ -28,7 +26,7 @@ export default function Hero() {
               </button>
             </div>
             <p className="text-[24px] text-[#17151D] font-light mt-2 ml-2">
-              Don't worry, we will not send spam :)
+              Don`t worry, we will not send spam :)
             </p>
           </div>
         </div>

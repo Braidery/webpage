@@ -3,8 +3,9 @@
     "baseUrl": ".",
     "paths": {
       "@/*": [
-        "./src/*"
-      ]
+        "./src/*",
+      ],
+      "@/fonts": ["./styles/fonts"]
     },
     "lib": [
       "dom",
