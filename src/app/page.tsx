@@ -1,4 +1,3 @@
-
 import Hero from '../components/ui/hero';
 import About from '../components/ui/about';
 import WhyBraidery from '../components/ui/whyBraidery';
@@ -11,7 +10,6 @@ export default function LandingPage() {
       <About />
       <WhyBraidery />
       <Download />
-      
     </div>
   );
 }
