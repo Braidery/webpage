@@ -30,7 +30,7 @@ const NavBar = () => {
         {/* Logo */}
         <div className="flex justify-between items-center w-full md:w-auto">
           <Image
-            src="/logo.png"
+            src="/braiderylogo-removebg-preview.png"
             alt="Braidery Logo"
             className="object-fill"
             width={90}
@@ -79,7 +79,7 @@ const NavBar = () => {
 
         {/* Right Side - Call to Action Button */}
         <button className="mt-4 md:flex hidden  md:mt-0 bg-[#17151D] text-white px-6 py-2 rounded-full hover:bg-gray-800">
-          Get now
+          coming soon
         </button>
       </nav>
     </div>
