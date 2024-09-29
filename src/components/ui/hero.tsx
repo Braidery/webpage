@@ -1,26 +1,48 @@
-"use client"; 
-
+"use client"; // Ensures the component runs as a Client Component
 
 import Image from "next/image";
-import EmailForm from "@/components/ui/EmailForm"; // Import the EmailForm component
-// Import React hook and Firebase Analytics
-import { useEffect } from 'react';
+import { useState, FormEvent, useEffect } from 'react';
+import { db } from '@/utils/firebase';
+import { addDoc, collection } from 'firebase/firestore';
 import { analytics } from '@/utils/firebase'; // Import Firebase analytics
 
-const LandingPage = () => {
+const Hero: React.FC = () => {
+  // Firebase Analytics initialization inside useEffect
   useEffect(() => {
     if (typeof window !== 'undefined' && analytics) {
-      // Analytics should only run in the client-side environment
       console.log('Firebase Analytics initialized');
-      // You can also log custom events here
     }
   }, []);
-};
 
+  const [email, setEmail] = useState<string>('');
+  const [message, setMessage] = useState<string>('');
 
+  // Handle form submission
+  const handleSubmit = async (event: FormEvent) => {
+    event.preventDefault();
 
+    try {
+      if (!validateEmail(email)) {
+        setMessage('Please enter a valid email address.');
+        return;
+      }
 
-export default function Hero() {
+      // Add the email to Firestore collection
+      await addDoc(collection(db, 'emails'), { email });
+
+      setMessage('Email submitted successfully!');
+      setEmail('');
+    } catch (error) {
+      console.error('Error storing email:', error);
+      setMessage('Error submitting email. Please try again.');
+    }
+  };
+
+  // Email validation function
+  const validateEmail = (email: string) => {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  };
+
   return (
     <section className="hero">
       <div className="flex flex-col max-w-[1350px] md:mx-auto md:flex-row items-center md:gap-8 py-24 md:py-12 px-8 md:px-12">
@@ -29,7 +51,31 @@ export default function Hero() {
             Get notified <br /> When we launch
           </h1>
           <div className="mx-auto md:mx-0 mb-6">
-            <EmailForm /> {/* Insert the EmailForm here */}
+            <div className="flex items-center justify-between md:max-w-[32rem] mb-8 p-2 border-[1px] border-black rounded-full shadow-lg">
+              {/* Email form */}
+              <form onSubmit={handleSubmit} className="flex w-full items-center">
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="Enter your email to be notified"
+                  required
+                  className="flex-grow bg-transparent outline-none px-6 py-4 text-lg font-light placeholder-gray-600 border-none focus:ring-0"
+                />
+                <button
+                  type="submit"
+                  className="bg-[#ECAB88] text-white px-6 py-4 text-lg font-semibold rounded-full hover:bg-[#d5906a] transition-all duration-300"
+                >
+                  Notified Me
+                </button>
+              </form>
+            </div>
+            {/* Display success or error message */}
+            {message && (
+              <p className="text-sm text-[#17151D] font-light mt-2 ml-2">
+                {message}
+              </p>
+            )}
             <p className="text-[24px] text-[#17151D] font-light mt-2 ml-2">
               Don't worry, we will not send spam :)
             </p>
@@ -37,7 +83,7 @@ export default function Hero() {
         </div>
         <div className="z-10">
           <Image
-            src="/12.png" // Update with the correct image paths
+            src="/12.png" // Update with the correct image path
             alt="App mockup"
             width={530.01}
             height={50.58}
@@ -47,4 +93,6 @@ export default function Hero() {
       </div>
     </section>
   );
-}
+};
+
+export default Hero;
