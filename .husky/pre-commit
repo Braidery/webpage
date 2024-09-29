@@ -2,7 +2,7 @@ echo '👷🔨👷🔨... Trying to create production build... 👷🔨👷🔨'
 
 npx lint-staged ||
 (
-    echo '❌👷🔨❌ Better call Teleshore... Because your build failed ❌👷🔨❌
+    echo '❌👷🔨❌ Better call Telesphore... Because your build failed ❌👷🔨❌
             Next build failed: View the errors above to see why. 
     '
     false;
