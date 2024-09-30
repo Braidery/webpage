@@ -1,21 +1,17 @@
 /* src/app/globals.css */
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
-
-@import "./tailwind.css";
+@import './tailwind.css';
 
 /* Additional global styles */
 
 body {
-  font-family: "Inter", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
+  font-family: var(--font-poppins), sans-serif;
 }
 html,
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background: linear-gradient(to left, #FFF6E5,#FFF7E9,#FFFFFF)
+  background: linear-gradient(to left, #fff6e5, #fff7e9, #ffffff);
 }
 
 .container {
@@ -35,7 +31,7 @@ section {
 }
 
 .hero {
-  background: linear-gradient(to left, #FFF6E5,#FFF7E9,#FFFFFF);
+  background: linear-gradient(to left, #fff6e5, #fff7e9, #ffffff);
 }
 .about {
 }
