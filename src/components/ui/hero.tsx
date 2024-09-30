@@ -58,7 +58,7 @@ const Hero: React.FC = () => {
               Get notified <br /> When we launch
             </h1>
             <div className="mx-auto md:mx-0 mb-6">
-              <div className="flex items-center justify-between md:max-w-[30rem] mb-8 p-2 border-[1px] border-black rounded-full">
+              <div className="flex flex-col sm:flex-row items-center justify-between max-w-full sm:max-w-[30rem] mb-8 p-2 border-[1px] border-black rounded-full">
                 {/* Email form */}
                 <form
                   onSubmit={handleSubmit}
@@ -70,12 +70,12 @@ const Hero: React.FC = () => {
                     onChange={e => setEmail(e.target.value)}
                     placeholder="Enter your email to be notified"
                     required
-                    className="flex-grow bg-transparent outline-none px-6 py-2 md:py-4 text-lg font-light placeholder-gray-600 border-none focus:ring-0"
+                    className="flex-grow bg-transparent outline-none px-4 py-2 sm:py-3 lg:py-4 text-sm sm:text-base lg:text-lg font-light placeholder-gray-600 border-none focus:ring-0"
                   />
                   <button
                     type="submit"
                     disabled={loading}
-                    className="bg-[#ECAB88] text-white px-4 md:px-6  py-2 md:py-4 text-xs md:text-lg font-semibold rounded-full hover:bg-[#d5906a] transition-all duration-300"
+                    className="bg-[#ECAB88] text-white px-4 sm:px-6 py-2 sm:py-3 lg:py-4 text-xs sm:text-sm lg:text-lg font-semibold rounded-full hover:bg-[#d5906a] transition-all duration-300"
                   >
                     {loading ? 'Loading' : 'Notify Me'}
                   </button>
