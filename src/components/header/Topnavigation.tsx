@@ -95,9 +95,11 @@ const NavBar = () => {
         </ul>
 
         {/* Right Side - Call to Action Button */}
-        <button className="mt-4 md:flex hidden md:mt-0 bg-[#17151D] text-white px-6 py-2 rounded-full hover:bg-gray-800">
-          Coming Soon
-        </button>
+        <Link href={'/contact'}>
+          <button className="mt-4 md:flex hidden md:mt-0 bg-[#17151D] text-white px-6 py-2 rounded-full hover:bg-gray-800">
+            Ask a Question
+          </button>
+        </Link>
       </nav>
     </div>
   );
