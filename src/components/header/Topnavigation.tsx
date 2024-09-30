@@ -1,6 +1,7 @@
 "use client";
 import React, { useState,useEffect } from "react";
 import Image from "next/image";
+import Link from 'next/link';
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -60,19 +61,19 @@ const NavBar = () => {
         {/* Left Side - Navigation Links */}
         <ul className={`${isOpen ? "flex" : "hidden"} flex-col md:flex md:flex-row space-y-4 md:space-y-0 md:space-x-8 mt-4 md:mt-0`} >
           <li>
-            <a href="#" className="text-black hover:text-gray-700">
+            <Link href="#about" className="text-black hover:text-gray-700" passHref>
               About
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#" className="text-black hover:text-gray-700">
+            <Link href="#service" className="text-black hover:text-gray-700" passHref>
               Services
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#" className="text-black hover:text-gray-700">
+            <Link href="#approach" className="text-black hover:text-gray-700" passHref>
               Approach
-            </a>
+            </Link>
           </li>
         </ul>
 

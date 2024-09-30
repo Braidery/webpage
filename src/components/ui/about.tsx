@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function About() {
   return (
-    <section className="md:py-12">
+    <section id='about' className="md:py-12">
       <div className=" max-w-[1350px] mx-auto px-6 md:px-8 flex flex-col-reverse md:flex-row items-center">
         
         {/* Image Section */}

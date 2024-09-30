@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function WhyBraidery() {
   return (
-    <section className="max-w-[1350px] mx-auto px-6 md:px-12">
+    <section id='service' className="max-w-[1350px] mx-auto px-6 md:px-12">
       <div className='mb-6'>
       <h2 className=" text-[30px] md:text-[70px] font-bold mb-6">Why <span className="text-[#E6A97D]">BRAIDERY</span> ?</h2>
         <p className="text-[#18181B] text-[24px] md:text-[36px] font-extralight mb-8">
