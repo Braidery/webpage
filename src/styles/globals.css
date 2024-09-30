@@ -1,9 +1,9 @@
 /* src/app/globals.css */
-@import "./tailwind.css";
+@import './tailwind.css';
 
 /* Additional global styles */
 
-body{
+body {
   font-family: var(--font-poppins), sans-serif;
 }
 html,
@@ -11,7 +11,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background: linear-gradient(to left, #FFF6E5,#FFF7E9,#FFFFFF)
+  background: linear-gradient(to left, #fff6e5, #fff7e9, #ffffff);
 }
 
 .container {
@@ -31,7 +31,7 @@ section {
 }
 
 .hero {
-  background: linear-gradient(to left, #FFF6E5,#FFF7E9,#FFFFFF);
+  background: linear-gradient(to left, #fff6e5, #fff7e9, #ffffff);
 }
 .about {
 }

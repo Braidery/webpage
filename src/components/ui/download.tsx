@@ -1,8 +1,17 @@
+'use client';
 import Image from 'next/image';
+import { motion, Variants } from 'framer-motion';
+import { sectionVariants } from '@/utils/animation';
 
 export default function Download() {
   return (
-    <section className="px-12 max-w-[1350px] mx-auto">
+    <motion.section
+      id="approach"
+      initial="hidden"
+      whileInView="visible"
+      variants={sectionVariants}
+      className="px-12 md:max-w-[1350px] mx-auto"
+    >
       <h2 className="text-[32px] md:text-[70px] font-bold mb-6 text-center">
         Check <span className="text-[#E6A97D]">BRAIDERY</span> ON
       </h2>
@@ -24,6 +33,6 @@ export default function Download() {
         <Image src="/lo.png" alt="Google Play" width={200} height={60} />
         <Image src="/lo1.png" alt="App Store" width={200} height={60} />
       </div>
-    </section>
+    </motion.section>
   );
 }
