@@ -10,13 +10,13 @@ import { isSupported } from 'firebase/analytics';
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: 'AIzaSyDIcm5Hcs-V4XiD3Rqcgyxga0VwxssXGSo',
-  authDomain: 'braidery-fa8b7.firebaseapp.com',
-  projectId: 'braidery-fa8b7',
-  storageBucket: 'braidery-fa8b7.appspot.com',
-  messagingSenderId: '377676144588',
-  appId: '1:377676144588:web:3ac1e3f52ecbbde9024769',
-  measurementId: 'G-QXK4VE9FND'
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
+  measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID
 };
 
 let analytics: ReturnType<typeof getAnalytics> | undefined;

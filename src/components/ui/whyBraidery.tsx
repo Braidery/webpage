@@ -1,13 +1,23 @@
+'use client';
 import Image from 'next/image';
+import { motion, Variants } from 'framer-motion';
+import { sectionVariants } from '@/utils/animation';
 
 export default function WhyBraidery() {
   return (
-    <section className="max-w-[1350px] mx-auto px-6 md:px-12">
+    <motion.section
+      id="service"
+      initial="hidden"
+      whileInView="visible"
+      variants={sectionVariants}
+      viewport={{ once: true, amount: 0.3 }}
+      className="md:max-w-[1350px] mx-auto px-6 md:px-12"
+    >
       <div className="mb-6">
         <h2 className=" text-[30px] md:text-[70px] font-bold mb-6">
           Why <span className="text-[#E6A97D]">BRAIDERY</span> ?
         </h2>
-        <p className="text-[#18181B] text-[24px] md:text-[36px] font-extralight mb-8">
+        <p className="text-[#18181B] md:text-[36px] font-extralight mb-8">
           Braidery helps you build a fun, personalized hair regimen with the
           power of AI, guiding you step by step to reach your hair goals.
           Whether it’s tracking progress, recommending products, or offering
@@ -55,6 +65,6 @@ export default function WhyBraidery() {
         </div>
       </div>
       <div className="md:block hidden"></div>
-    </section>
+    </motion.section>
   );
 }
