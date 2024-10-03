@@ -8,7 +8,7 @@ import { Toaster } from 'sonner';
 
 export const metadata = {
   title: 'Braidery',
-  description: 'Find the perfect hairdresser with BRAIDERY'
+  description: 'The Ultimate Hair Care Companion'
 };
 
 export default function Layout({ children }: { children: ReactNode }) {
@@ -19,6 +19,11 @@ export default function Layout({ children }: { children: ReactNode }) {
       >
         <header className="">
           <NavBar />
+          <script 
+            async 
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9490987391720050"crossorigin="anonymous">
+
+          </script>
         </header>
         <Toaster richColors />
         <main className={`${Poppins.variable}flex-grow`}>{children}</main>
