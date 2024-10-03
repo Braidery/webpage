@@ -1,6 +1,7 @@
-"use client";
-import React, { useState,useEffect } from "react";
-import Image from "next/image";
+'use client';
+import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,8 +24,12 @@ const NavBar = () => {
   }, []);
 
   return (
-    <div className={`${scrolled && 'hero bg-opacity-100'} ${!scrolled && 'bg-white bg-opacity-0 border-none'} w-full z-50 fixed`} >
-      <nav className="flex flex-col md:flex-row max-w-[1350px] mx-auto justify-between items-center bg-cream px-3 py-4 md:px-10 md:py-6">
+    <div
+      className={`${
+        scrolled ? 'hero bg-opacity-100' : 'bg-white bg-opacity-0 border-none'
+      } w-full z-50 fixed transition-opacity duration-300`}
+    >
+      <nav className="flex flex-col md:flex-row max-w-[1350px] mx-auto justify-between items-center bg-cream px-3 py-4 md:px-7 md:py-6">
         {/* Logo */}
         <div className="flex justify-between items-center w-full md:w-auto">
           <Image
@@ -35,10 +40,7 @@ const NavBar = () => {
             height={50}
           />
           {/* Hamburger Icon for Mobile */}
-          <button
-            className="md:hidden block text-black"
-            onClick={toggleMenu}
-          >
+          <button className="md:hidden block text-black" onClick={toggleMenu}>
             {/* Hamburger icon */}
             <svg
               className="w-6 h-6"
@@ -58,27 +60,43 @@ const NavBar = () => {
         </div>
 
         {/* Left Side - Navigation Links */}
-        <ul className={`${isOpen ? "flex" : "hidden"} flex-col md:flex md:flex-row space-y-4 md:space-y-0 md:space-x-8 mt-4 md:mt-0`} >
+        <ul
+          className={`${
+            isOpen ? 'flex' : 'hidden'
+          } flex-col md:flex md:flex-row space-y-4 md:space-y-0 md:space-x-8 mt-4 md:mt-0`}
+        >
           <li>
-            <a href="#" className="text-black hover:text-gray-700">
+            <Link
+              href="#about"
+              className="text-black hover:text-gray-700"
+              passHref
+            >
               About
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#" className="text-black hover:text-gray-700">
+            <Link
+              href="#service"
+              className="text-black hover:text-gray-700"
+              passHref
+            >
               Services
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#" className="text-black hover:text-gray-700">
+            <Link
+              href="#approach"
+              className="text-black hover:text-gray-700"
+              passHref
+            >
               Approach
-            </a>
+            </Link>
           </li>
         </ul>
 
         {/* Right Side - Call to Action Button */}
-        <button className="mt-4 md:flex hidden  md:mt-0 bg-[#17151D] text-white px-6 py-2 rounded-full hover:bg-gray-800">
-          coming soon
+        <button className="mt-4 md:flex hidden md:mt-0 bg-[#17151D] text-white px-6 py-2 rounded-full hover:bg-gray-800">
+          Coming Soon
         </button>
       </nav>
     </div>
