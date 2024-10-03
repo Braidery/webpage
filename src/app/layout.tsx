@@ -14,17 +14,19 @@ export const metadata = {
 export default function Layout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
+      <head>
+        {/* Add the Google AdSense script here */}
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9490987391720050"
+          crossOrigin="anonymous"
+        />
+      </head>
       <body
         className={`${Poppins.variable} min-h-screen text-brown-600 dark:text-brown-800`}
       >
         <header className="">
           <NavBar />
-          <script 
-            async 
-            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9490987391720050"
-            crossOrigin="anonymous">
-
-          </script>
         </header>
         <Toaster richColors />
         <main className={`${Poppins.variable}flex-grow`}>{children}</main>
