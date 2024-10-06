@@ -22,7 +22,6 @@ export default function Layout({ children }: { children: ReactNode }) {
           crossOrigin="anonymous"
         />
 
-      
         <link rel="icon" href="/braiderylogo-removebg-preview.png" />
         {/* You can also add multiple sizes for different devices */}
         {/* <link rel="icon" href="/favicon.png" sizes="32x32" type="image/png" /> */}
