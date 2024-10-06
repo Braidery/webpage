@@ -6,12 +6,20 @@ import { Toaster } from 'sonner';
 
 export const metadata = {
   title: 'Braidery',
-  description: 'Find the perfect hairdresser with BRAIDERY'
+  description: 'The Ultimate Hair Care Companion'
 };
 
 export default function Layout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
+      <head>
+        {/* Add the Google AdSense script here */}
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9490987391720050"
+          crossOrigin="anonymous"
+        />
+      </head>
       <head>
         <link rel="icon" href="/braiderylogo-removebg-preview.png" />
         {/* You can also add multiple sizes for different devices */}
@@ -20,7 +28,7 @@ export default function Layout({ children }: { children: ReactNode }) {
         <title>Braidery</title>
         <meta
           name="description"
-          content="Find the perfect hairdresser with BRAIDERY"
+          content="Your Hair Care Companion, Tailored to Every Texture."
         />
       </head>
       <body
