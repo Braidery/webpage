@@ -26,7 +26,9 @@ const NavBar = () => {
   return (
     <div
       className={`${
-        scrolled ? 'hero bg-opacity-100' : 'bg-white bg-opacity-0 border-none'
+        scrolled
+          ? 'hero bg-opacity-100'
+          : 'hero  bg-white bg-opacity-0 border-none'
       } w-full z-50 fixed transition-opacity duration-300`}
     >
       <nav className="flex flex-col md:flex-row max-w-[1350px] mx-auto justify-between items-center bg-cream px-3 py-4 md:px-7 md:py-6">
