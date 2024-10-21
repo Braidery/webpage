@@ -26,7 +26,9 @@ const NavBar = () => {
   return (
     <div
       className={`${
-        scrolled ? 'hero bg-opacity-100' : 'bg-white bg-opacity-0 border-none'
+        scrolled
+          ? 'hero bg-opacity-100'
+          : 'hero  bg-white bg-opacity-0 border-none'
       } w-full z-50 fixed transition-opacity duration-300`}
     >
       <nav className="flex flex-col md:flex-row max-w-[1350px] mx-auto justify-between items-center bg-cream px-3 py-4 md:px-7 md:py-6">
@@ -62,8 +64,8 @@ const NavBar = () => {
         {/* Left Side - Navigation Links */}
         <ul
           className={`${
-            isOpen ? 'flex z-50 bg-[FFF6E8]' : 'hidden'
-          } flex-col md:flex md:flex-row space-y-4 md:space-y-0 md:space-x-8 mt-4 md:mt-0`}
+            isOpen ? 'flex  ' : 'hidden'
+          } z-50 bg-[FFF6E8] flex-col md:flex md:flex-row space-y-4 md:space-y-0 md:space-x-8 mt-4 md:mt-0`}
         >
           <li>
             <Link
