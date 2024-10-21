@@ -62,8 +62,8 @@ const NavBar = () => {
         {/* Left Side - Navigation Links */}
         <ul
           className={`${
-            isOpen ? 'flex z-50 bg-[FFF6E8]' : 'hidden'
-          } flex-col md:flex md:flex-row space-y-4 md:space-y-0 md:space-x-8 mt-4 md:mt-0`}
+            isOpen ? 'flex  ' : 'hidden'
+          } z-50 bg-[FFF6E8] flex-col md:flex md:flex-row space-y-4 md:space-y-0 md:space-x-8 mt-4 md:mt-0`}
         >
           <li>
             <Link
