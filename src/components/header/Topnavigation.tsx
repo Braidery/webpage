@@ -36,8 +36,8 @@ const NavBar = () => {
             src="/braiderylogo-removebg-preview.png"
             alt="Braidery Logo"
             className="object-fill"
-            width={90}
-            height={50}
+            width={50}
+            height={40}
           />
           {/* Hamburger Icon for Mobile */}
           <button className="md:hidden block text-black" onClick={toggleMenu}>
@@ -62,7 +62,7 @@ const NavBar = () => {
         {/* Left Side - Navigation Links */}
         <ul
           className={`${
-            isOpen ? 'flex' : 'hidden'
+            isOpen ? 'flex z-50 bg-[FFF6E8]' : 'hidden'
           } flex-col md:flex md:flex-row space-y-4 md:space-y-0 md:space-x-8 mt-4 md:mt-0`}
         >
           <li>
@@ -95,9 +95,11 @@ const NavBar = () => {
         </ul>
 
         {/* Right Side - Call to Action Button */}
-        <button className="mt-4 md:flex hidden md:mt-0 bg-[#17151D] text-white px-6 py-2 rounded-full hover:bg-gray-800">
-          Coming Soon
-        </button>
+        <Link href={'/contact'}>
+          <button className="mt-4 md:flex hidden md:mt-0 bg-[#17151D] text-white px-6 py-2 rounded-full hover:bg-gray-800">
+            Ask a Question
+          </button>
+        </Link>
       </nav>
     </div>
   );
