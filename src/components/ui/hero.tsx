@@ -27,7 +27,6 @@ const Hero: React.FC = () => {
         setMessage('Please enter a valid email address.');
         return;
       }
-      // Add the email to Firestore collection
       const docFile = await addDoc(collection(db, 'emails'), { email: email });
       toast.success('Email submitted successfully!', {
         position: 'top-center'
