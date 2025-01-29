@@ -10,7 +10,6 @@ export default function LandingPage() {
       <Hero />
       <About />
       <WhyBraidery />
-      {/* <FAQ /> */}
       <Download />
     </div>
   );

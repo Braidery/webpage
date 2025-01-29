@@ -31,8 +31,7 @@ const Hero: React.FC = () => {
         setLoading(false);
         return;
       }
-      // Add the email to Firestore collection
-      await addDoc(collection(db, 'emails'), { email });
+      const docFile = await addDoc(collection(db, 'emails'), { email: email });
       toast.success('Email submitted successfully!', {
         position: 'top-center'
       });
