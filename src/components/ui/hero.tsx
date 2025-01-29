@@ -1,16 +1,19 @@
 'use client'; // Ensures the component runs as a Client Component
+
 import Image from 'next/image';
 import { useState, FormEvent, useEffect } from 'react';
 import { db } from '@/utils/firebase';
 import { addDoc, collection } from 'firebase/firestore';
 import { analytics } from '@/utils/firebase';
 import { toast } from 'sonner';
-import { motion, Variants } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { sectionVariants } from '@/utils/animation';
 import { validateEmail } from '@/utils/function';
+
 const Hero: React.FC = () => {
   useEffect(() => {
     if (typeof window !== 'undefined' && analytics) {
+      // You can add analytics code here if needed
     }
   }, []);
 
@@ -25,6 +28,7 @@ const Hero: React.FC = () => {
     try {
       if (!validateEmail(email)) {
         setMessage('Please enter a valid email address.');
+        setLoading(false);
         return;
       }
       const docFile = await addDoc(collection(db, 'emails'), { email: email });
@@ -33,7 +37,6 @@ const Hero: React.FC = () => {
       });
       setLoading(false);
       setEmail('');
-      // setEmail('');
     } catch (error) {
       toast.error('Error submitting email. Please try again.', {
         position: 'top-center'
@@ -93,7 +96,7 @@ const Hero: React.FC = () => {
               alt="App mockup"
               width={530.01}
               height={50.58}
-              className=""
+              className="w-full h-auto"
             />
           </div>
         </div>
