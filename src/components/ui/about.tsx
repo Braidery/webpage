@@ -7,7 +7,7 @@ export default function About() {
   return (
     <motion.section
       id="about"
-      className="md:py-12"
+      className="md:py-20"
       initial="hidden"
       whileInView="visible"
       variants={sectionVariants}
@@ -26,9 +26,9 @@ export default function About() {
         </div>
 
         {/* Text Section */}
-        <div className="md:w-2/3  mb-8 md:mb-0 md:pl-12">
+        <div className="md:w-2/3 mb-8 md:mb-0 md:pl-12">
           <h2 className=" text-[32px] md:text-[70px] mb-6">
-            What`s <span className="text-[#E6A97D]">BRAIDERY</span> ?
+            What`s <span className="text-[#E6A97D]">BRAIDERY</span>?
           </h2>
           <p className="text-[#18181B] md:text-[28px] font-extralight mb-4">
             BRAIDERY is a comprehensive hair care platform designed to connect
