@@ -54,17 +54,17 @@ const Hero: React.FC = () => {
         viewport={{ once: true, amount: 0.3 }}
         className="hero"
       >
-        <div className="flex flex-col md:max-w-[1350px] md:mx-auto md:flex-row items-center md:gap-8 pt-24 md:py-12 px-8 md:px-12">
+        <div className="flex flex-col md:max-w-[1350px] md:mx-auto md:flex-row items-center md:gap-8 pt-2 md:py-12 px-8 md:px-12">
           <div className="mb-8 md:mb-0 z-10">
-            <h1 className="text-6xl md:text-[90px] mb-6 text-[#17151D] leading-tight">
+            <h1 className="text-6xl md:text-[90px] mb-6 text-[#17151D] leading-tight px-6 md:px-0">
               Get notified <br /> When we launch
             </h1>
-            <div className="mx-auto md:mx-0 mb-6">
-              <div className="flex flex-col sm:flex-row items-center justify-between max-w-full sm:max-w-[30rem] mb-8 p-2 border-[1px] border-black rounded-full">
+            <div className="mx-auto mb-6">
+              <div className="relative w-full flex flex-col sm:flex-row items-center justify-between max-w-full sm:max-w-[30rem] mb-8 md:p-10 p-8 border-[1px] border-black rounded-full">
                 {/* Email form */}
                 <form
                   onSubmit={handleSubmit}
-                  className="flex w-full items-center"
+                  className="flex w-full justify-center items-center"
                 >
                   <input
                     type="email"
@@ -72,12 +72,12 @@ const Hero: React.FC = () => {
                     onChange={e => setEmail(e.target.value)}
                     placeholder="Enter your email to be notified"
                     required
-                    className="flex-grow bg-transparent outline-none px-4 py-2 sm:py-3 lg:py-4 text-sm sm:text-base lg:text-lg font-light placeholder-gray-600 border-none focus:ring-0"
+                    className="absolute left-0 bg-transparent outline-none px-4 py-2 sm:py-3 md:px-2 lg:py-2 text-sm sm:text-base lg:text-lg font-light lg:placeholder:text-lg placeholder:text-sm placeholder-gray-600 border-none focus:ring-0"
                   />
                   <button
                     type="submit"
                     disabled={loading}
-                    className="bg-[#ECAB88] text-white px-4 sm:px-6 py-2 sm:py-3 lg:py-4 text-xs sm:text-sm lg:text-lg font-semibold rounded-full hover:bg-[#d5906a] transition-all duration-300"
+                    className="bg-[#ECAB88] absolute right-0 px-4 text-white md:mr-2 mr-2 sm:px-6 py-4 sm:py-3 lg:py-5 text-xs sm:text-sm lg:text-lg font-semibold rounded-full hover:bg-[#d5906a] transition-all duration-300"
                   >
                     {loading ? 'Loading' : 'Notify Me'}
                   </button>
@@ -85,7 +85,7 @@ const Hero: React.FC = () => {
               </div>
               {/* Display success or error message */}
 
-              <p className="text-[24px] text-[#17151D] font-light mt-2 ml-2">
+              <p className="text-[24px] text-[#17151D] font-light mt-2 ml-2 md:px-0 px-6">
                 Don`t worry, we will not send spam :{')'}
               </p>
             </div>

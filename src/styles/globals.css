@@ -11,7 +11,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background: linear-gradient(to left, #fff6e5, #fff7e9, #ffffff);
+  background: linear-gradient(to bottom, #2f5d60, #5e8578, #a17e68, #dda37b);
 }
 
 .container {
@@ -26,12 +26,6 @@ section {
 
 @media (min-width: 768px) {
   section {
-    padding: 100px 0;
+    padding: 55px 0;
   }
-}
-
-.hero {
-  background: linear-gradient(to left, #fff6e5, #fff7e9, #ffffff);
-}
-.about {
 }
