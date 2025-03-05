@@ -72,7 +72,7 @@ const Hero: React.FC = () => {
                     onChange={e => setEmail(e.target.value)}
                     placeholder="Enter your email to be notified"
                     required
-                    className="absolute left-0 bg-transparent outline-none px-4 py-2 sm:py-3 md:px-2 lg:py-2 text-sm sm:text-base lg:text-lg font-light lg:placeholder:text-lg placeholder:text-sm placeholder-gray-600 border-none focus:ring-0"
+                    className="absolute left-0 bg-transparent outline-none px-4 py-2 sm:py-3 md:px-2 lg:py-2 text-sm text-gray-200 sm:text-base lg:text-lg font-light lg:placeholder:text-lg placeholder:text-sm placeholder-gray-300 border-none focus:ring-0"
                   />
                   <button
                     type="submit"

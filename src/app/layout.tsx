@@ -45,7 +45,7 @@ export default function Layout({ children }: { children: ReactNode }) {
           <p>
             <a
               href="mailto:cgamman@braidery.com"
-              className="text-blue-500 hover:underline"
+              className="text-gray-100 hover:underline"
             >
               cgamman@braidery.com
             </a>
