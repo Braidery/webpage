@@ -15,8 +15,8 @@ export default function LandingPage() {
       <About />
       <Features />
       <WhyBraidery />
-      <Testimonials />
-      <Blog />
+      {/* <Testimonials />
+      <Blog /> */}
       <Download />
       <FAQ />
       <Contact />

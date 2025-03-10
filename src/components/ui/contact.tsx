@@ -74,7 +74,7 @@ export default function Contact() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
                 <label htmlFor="name" className="block mb-2 text-white">
-                  {t('contact.form.name')}
+                  {t('contact.name')}
                 </label>
                 <input
                   type="text"
@@ -88,7 +88,7 @@ export default function Contact() {
               </div>
               <div>
                 <label htmlFor="email" className="block mb-2 text-white">
-                  {t('contact.form.email')}
+                  {t('contact.email')}
                 </label>
                 <input
                   type="email"
@@ -103,7 +103,7 @@ export default function Contact() {
             </div>
             <div>
               <label htmlFor="subject" className="block mb-2 text-white">
-                {t('contact.form.subject')}
+                {t('contact.subject')}
               </label>
               <input
                 type="text"
@@ -117,7 +117,7 @@ export default function Contact() {
             </div>
             <div>
               <label htmlFor="message" className="block mb-2 text-white">
-                {t('contact.form.message')}
+                {t('contact.message')}
               </label>
               <textarea
                 id="message"
@@ -133,7 +133,7 @@ export default function Contact() {
               type="submit"
               className="px-6 py-3 bg-[#ECAB88] text-white font-medium rounded-lg hover:bg-[#d99b78] transition-colors"
             >
-              {t('contact.form.submit')}
+              {t('contact.submit')}
             </button>
           </form>
         </div>

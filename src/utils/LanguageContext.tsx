@@ -130,6 +130,8 @@ const translations: Translations = {
     'contact.messagePlaceholder': 'What would you like to tell us?',
     'contact.sendButton': 'Send Message',
     'contact.sending': 'Sending...',
+    'contact.submit': 'Send',
+    'contact.subject': 'Subject',
 
     // Footer
     'footer.rights': 'All rights reserved.',
@@ -274,6 +276,8 @@ const translations: Translations = {
     'contact.messagePlaceholder': 'Hva vil du fortelle oss?',
     'contact.sendButton': 'Send melding',
     'contact.sending': 'Sender...',
+    'contact.submit': 'Send',
+    'contact.subject': 'Emne',
 
     // Footer
     'footer.rights': 'Alle rettigheter reservert.',
@@ -420,6 +424,8 @@ const translations: Translations = {
     'contact.messagePlaceholder': 'Que souhaitez-vous nous dire?',
     'contact.sendButton': 'Envoyer le message',
     'contact.sending': 'Envoi en cours...',
+    'contact.submit': 'Envoyer',
+    'contact.subject': 'Sujet',
 
     // Footer
     'footer.rights': 'Tous droits réservés.',

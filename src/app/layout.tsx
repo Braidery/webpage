@@ -31,28 +31,11 @@ export default function Layout({ children }: { children: ReactNode }) {
       <body className={Poppins.className}>
         <LanguageProvider>
           <NavBar />
-<<<<<<< HEAD
           <main className="min-h-screen bg-transparent pt-20">{children}</main>
           <Footer />
           <BackToTop />
           <Toaster position="top-center" />
         </LanguageProvider>
-=======
-        </header>
-        <Toaster richColors />
-        <main className={`${Poppins.variable} flex-grow`}>{children}</main>
-        <footer className="border-t py-8 text-center bg-peach-300 dark:bg-darkButton text-[#18181B]">
-          &copy; {new Date().getFullYear()} BRAIDERY. All rights reserved.{' '}
-          <p>
-            <a
-              href="mailto:cgamman@braidery.com"
-              className="text-gray-100 hover:underline"
-            >
-              cgamman@braidery.com
-            </a>
-          </p>
-        </footer>
->>>>>>> d86f596 (feedback changes)
       </body>
     </html>
   );

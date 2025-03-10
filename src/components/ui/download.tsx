@@ -35,8 +35,8 @@ export default function Download() {
           <p className="text-white mb-8">{t('download.notification')}</p>
 
           <div className="flex flex-wrap justify-center gap-4">
-            <Image src="/lo.png" alt="Google Play" width={200} height={60} />
-            <Image src="/lo1.png" alt="App Store" width={200} height={60} />
+            <Image src="/google.svg" alt="Google Play" width={200} height={0} />
+            <Image src="/apple.svg" alt="App Store" width={200} height={0} />
           </div>
         </div>
       </div>

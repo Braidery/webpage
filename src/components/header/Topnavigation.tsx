@@ -131,14 +131,14 @@ const NavBar = () => {
               {t('nav.services')}
             </button>
           </li>
-          <li>
+          {/* <li>
             <button
               onClick={() => handleNavigation('blog')}
               className="text-white hover:text-[#ECAB88]"
             >
               {t('nav.blog')}
             </button>
-          </li>
+          </li> */}
           <li>
             <button
               onClick={() => handleNavigation('faq')}
