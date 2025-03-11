@@ -14,7 +14,7 @@ export default function Footer() {
           <div className="text-center md:text-left">
             <h3 className="text-white font-semibold text-lg mb-3">BRAIDERY</h3>
             <p className="text-white/80 text-sm mb-2">
-              {t('footer.orgNumber')}: 123456789
+              {t('footer.orgNumber')}: 934251105
             </p>
             <p className="text-white/80 text-sm">
               <a
