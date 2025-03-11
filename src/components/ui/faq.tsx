@@ -1,88 +1,129 @@
 'use client';
 import { useState } from 'react';
-import { FiChevronDown, FiChevronUp } from 'react-icons/fi';
-import clsx from 'clsx';
-const faqData = [
-  {
-    question: 'What is Braidery?',
-    answer:
-      'BRAIDERY is a comprehensive hair care platform designed to connect individuals with expert braiders and hair care professionals.'
-  },
-  {
-    question: 'What are the offer about that?',
-    answer:
-      'We offer a variety of services tailored to your hair care needs, including braiding, styling, and more.'
-  },
-  {
-    question: 'Which services?',
-    answer:
-      'We provide braiding, hair styling, and other hair care services from professional braiders.'
-  },
-  {
-    question: 'What is a wireframe?',
-    answer:
-      'A wireframe is a visual guide that represents the skeletal framework of a website.'
-  },
-  {
-    question: 'What is user testing?',
-    answer:
-      'User testing is the process of evaluating a product by testing it with real users.'
-  }
-];
+import { motion, AnimatePresence } from 'framer-motion';
+import { sectionVariants } from '@/utils/animation';
+import { useLanguage } from '@/utils/LanguageContext';
 
 export default function FAQ() {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const { t } = useLanguage();
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+
+  const faqs = [
+    {
+      id: 1,
+      questionKey: 'faq.q1',
+      answerKey: 'faq.a1'
+    },
+    {
+      id: 2,
+      questionKey: 'faq.q2',
+      answerKey: 'faq.a2'
+    },
+    {
+      id: 3,
+      questionKey: 'faq.q3',
+      answerKey: 'faq.a3'
+    },
+    {
+      id: 4,
+      questionKey: 'faq.q4',
+      answerKey: 'faq.a4'
+    },
+    {
+      id: 5,
+      questionKey: 'faq.q5',
+      answerKey: 'faq.a5'
+    }
+  ];
 
   const toggleFAQ = (index: number) => {
-    if (openIndex === index) {
-      setOpenIndex(null); // Close the currently opened FAQ
-    } else {
-      setOpenIndex(index); // Open the clicked FAQ
-    }
+    setActiveIndex(activeIndex === index ? null : index);
   };
 
   return (
-    <div className="max-w-6xl mx-auto px-4">
-      <h2 className="text-3xl md:text-[64px] px-2 font-extrabold mb-14">
-        Frequently Asked Questions
-      </h2>
-      {faqData.map((faq, index) => (
-        <div
-          key={index}
-          className="bg-[#FFF6E5] my-4  p-8 rounded cursor-pointer "
-          onClick={() => toggleFAQ(index)}
-        >
-          <div className="flex px-1 md:px-8 justify-between items-center ">
-            <h3
-              className={`text-lg font-light ${
-                openIndex === index ? 'text-[#E6A97D]' : 'text-[#E6A97D]'
-              }`}
-            >
-              {faq.question}
-            </h3>
-            <div
-              className={clsx(
-                'transition-transform duration-300',
-                openIndex === index ? 'rotate-180' : 'rotate-0'
-              )}
-            >
-              <FiChevronDown className="w-6 h-6" />
-            </div>
-          </div>
+    <motion.section
+      id="faq"
+      initial="hidden"
+      whileInView="visible"
+      variants={sectionVariants}
+      viewport={{ once: true, amount: 0.3 }}
+      className="py-16 md:py-24"
+    >
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+            {t('faq.title')}{' '}
+            <span className="text-[#ECAB88]">{t('faq.titleHighlight')}</span>
+          </h2>
+          <p className="text-white max-w-2xl mx-auto">{t('faq.description')}</p>
+        </div>
 
-          {/* Animated Answer Section */}
-          <div
-            className={clsx(
-              'overflow-hidden transition-all duration-500 bg-[#FFF6E5] px-8',
-              openIndex === index ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'
-            )}
-          >
-            <p className="mt-4 text-brown-600 font-light transition-opacity duration-500">
-              {faq.answer}
-            </p>
+        <div className="max-w-4xl mx-auto">
+          <div className="space-y-4">
+            {faqs.map((faq, index) => (
+              <div
+                key={faq.id}
+                className="bg-white/10 backdrop-blur-sm rounded-lg overflow-hidden"
+              >
+                <button
+                  onClick={() => toggleFAQ(index)}
+                  className="flex justify-between items-center w-full py-4 px-6 bg-white/10 backdrop-blur-sm rounded-lg text-white font-medium text-left"
+                >
+                  <span>{t(faq.questionKey)}</span>
+                  <span>
+                    {activeIndex === index ? (
+                      <svg
+                        className="w-6 h-6"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M19 9l-7 7-7-7"
+                        ></path>
+                      </svg>
+                    ) : (
+                      <svg
+                        className="w-6 h-6"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M9 5l7 7-7 7"
+                        ></path>
+                      </svg>
+                    )}
+                  </span>
+                </button>
+                <AnimatePresence>
+                  {activeIndex === index && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: 'auto', opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.3 }}
+                      className={`px-6 py-4 text-white/90 ${
+                        activeIndex === index ? 'block' : 'hidden'
+                      }`}
+                    >
+                      <p className="text-white">{t(faq.answerKey)}</p>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+            ))}
           </div>
         </div>
-      ))}
-    </div>
+      </div>
+    </motion.section>
   );
 }
