@@ -28,10 +28,10 @@ const translations: Translations = {
     'hero.subtitle': 'When we launch',
     'hero.emailPlaceholder': 'Enter your email to be notified',
     'hero.notifyButton': 'Notify Me',
-    'hero.spamMessage': "Don\'t worry, we will not send spam :)",
+    'hero.spamMessage': "Don't worry, we will not send spam :)",
 
     // About section
-    'about.title': "What\'s",
+    'about.title': "What's",
     'about.titleHighlight': 'BRAIDERY',
     'about.description':
       'BRAIDERY is a comprehensive hair care platform designed to connect individuals with expert braiders and hair care professionals, while also providing personalized hair care recommendations and tools. It is a one-stop solution for everything hair-related.',
@@ -113,9 +113,9 @@ const translations: Translations = {
     'faq.q4': 'Will Braidery be available in my area?',
     'faq.a4':
       'We plan to launch in major cities first and gradually expand our coverage. Sign up to be notified when we launch in your area!',
-    'faq.q5': "I\'m a professional braider. How can I join the platform?",
+    'faq.q5': "I'm a professional braider. How can I join the platform?",
     'faq.a5':
-      "We\'ll have a dedicated onboarding process for professional stylists and braiders. Sign up for our waitlist to be among the first to join when we launch!",
+      "We'll have a dedicated onboarding process for professional stylists and braiders. Sign up for our waitlist to be among the first to join when we launch!",
 
     // Contact section
     'contact.title': 'Get In',
@@ -320,10 +320,10 @@ const translations: Translations = {
     'hero.emailPlaceholder': 'Entrez votre email pour être notifié',
     'hero.notifyButton': 'Me notifier',
     'hero.spamMessage':
-      "Ne vous inquiétez pas, nous n\'enverrons pas de spam :)",
+      "Ne vous inquiétez pas, nous n'enverrons pas de spam :)",
 
     // About section
-    'about.title': "Qu\'est-ce que",
+    'about.title': "Qu'est-ce que",
     'about.titleHighlight': 'BRAIDERY',
     'about.description':
       "BRAIDERY est une plateforme complète de soins capillaires conçue pour connecter les individus avec des tresseurs experts et des professionnels des soins capillaires, tout en fournissant des recommandations et des outils de soins capillaires personnalisés. C'est une solution tout-en-un pour tout ce qui concerne les cheveux.",
@@ -394,10 +394,10 @@ const translations: Translations = {
     'faq.titleHighlight': 'Fréquentes',
     'faq.description':
       'Trouvez des réponses aux questions courantes sur Braidery et nos services.',
-    'faq.q1': "Qu\'est-ce que Braidery?",
+    'faq.q1': "Qu'est-ce que Braidery?",
     'faq.a1':
       'Braidery est une plateforme complète de soins capillaires conçue pour connecter les individus avec des tresseurs experts et des professionnels des soins capillaires, tout en fournissant des recommandations et des outils de soins capillaires personnalisés.',
-    'faq.q2': "Quand l\'application sera-t-elle disponible?",
+    'faq.q2': "Quand l'application sera-t-elle disponible?",
     'faq.a2':
       'Notre application est actuellement en développement. Inscrivez-vous avec votre email pour être notifié dès que nous lançons!',
     'faq.q3': 'Comment fonctionne le système de recommandation AI?',
@@ -405,11 +405,11 @@ const translations: Translations = {
       'Notre IA analyse votre type de cheveux, texture, préoccupations et objectifs pour fournir des recommandations de produits personnalisées et des routines de soins capillaires adaptées spécifiquement à vos besoins.',
     'faq.q4': 'Braidery sera-t-il disponible dans ma région?',
     'faq.a4':
-      "Nous prévoyons de lancer d\'abord dans les grandes villes et d\'étendre progressivement notre couverture. Inscrivez-vous pour être notifié lorsque nous lançons dans votre région!",
+      "Nous prévoyons de lancer d'abord dans les grandes villes et d'étendre progressivement notre couverture. Inscrivez-vous pour être notifié lorsque nous lançons dans votre région!",
     'faq.q5':
       'Je suis un tresseur professionnel. Comment puis-je rejoindre la plateforme?',
     'faq.a5':
-      "Nous aurons un processus d\'intégration dédié pour les stylistes professionnels et les tresseurs. Inscrivez-vous sur notre liste d\'attente pour être parmi les premiers à rejoindre lors de notre lancement!",
+      "Nous aurons un processus d'intégration dédié pour les stylistes professionnels et les tresseurs. Inscrivez-vous sur notre liste d'attente pour être parmi les premiers à rejoindre lors de notre lancement!",
 
     // Contact section
     'contact.title': 'Entrer en',
