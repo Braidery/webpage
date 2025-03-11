@@ -20,8 +20,8 @@ export default function About() {
         {/* Image Section */}
         <div className="md:w-1/3 flex justify-center md:justify-start">
           <Image
-            src="/1.png"
-            alt="Braidery app interface"
+            src="/about.png"
+            alt="about.png"
             width={340}
             height={400}
             className="rounded-xl"

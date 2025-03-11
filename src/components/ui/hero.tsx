@@ -95,11 +95,11 @@ const Hero: React.FC = () => {
           </div>
           <div className="z-10">
             <Image
-              src="/12.png" // Update with the correct image path
+              src="/home.png" // Update with the correct image path
               alt="App mockup"
-              width={530.01}
-              height={50.58}
-              className="w-full h-auto"
+              width={548}
+              height={269}
+              className=""
             />
           </div>
         </div>
