@@ -1,90 +1,143 @@
 'use client';
-import Image from 'next/image';
-import { useState } from 'react';
+import { useState, FormEvent } from 'react';
+import { motion } from 'framer-motion';
+import { sectionVariants } from '@/utils/animation';
+import { toast } from 'sonner';
+import { useLanguage } from '@/utils/LanguageContext';
 
-const ContactPage = () => {
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
+export default function Contact() {
+  const { t } = useLanguage();
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: ''
+  });
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
+    setLoading(true);
+
+    // Simulate form submission
+    setTimeout(() => {
+      toast.success(
+        'Message sent successfully! We will get back to you soon.',
+        {
+          position: 'top-center'
+        }
+      );
+      setFormData({
+        name: '',
+        email: '',
+        subject: '',
+        message: ''
+      });
+      setLoading(false);
+    }, 1500);
   };
 
   return (
-    <div className="bg-[#FFF6E5] min-h-screen flex items-center justify-center">
-      <div className="container mx-auto px-6 md:px-12 lg:px-24 py-12">
-        <div className="grid md:grid-cols-2 gap-8">
-          {/* Left Section: Form and Text */}
-          <div className="space-y-6">
-            <h1 className="text-[40px] md:text-[64px] font-extrabold text-[#E6A97D]">
-              Quickly Get Updates
-            </h1>
-            <p className="text-lg font-light text-brown-600">
-              Any question or remarks? Just write us a message!
-            </p>
+    <motion.section
+      id="contact"
+      initial="hidden"
+      whileInView="visible"
+      variants={sectionVariants}
+      viewport={{ once: true, amount: 0.3 }}
+      className="py-16 md:py-24"
+    >
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+            {t('contact.title')}{' '}
+            <span className="text-[#ECAB88]">
+              {t('contact.titleHighlight')}
+            </span>
+          </h2>
+          <p className="text-white max-w-2xl mx-auto">
+            {t('contact.description')}
+          </p>
+        </div>
 
-            <form onSubmit={handleSubmit} className="space-y-6">
+        <div className="max-w-4xl mx-auto bg-white/10 backdrop-blur-sm rounded-lg p-8">
+          <form onSubmit={handleSubmit} className="space-y-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <label
-                  htmlFor="email"
-                  className="block text-sm font-medium text-brown-600"
-                >
-                  Email
+                <label htmlFor="name" className="block mb-2 text-white">
+                  {t('contact.name')}
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  className="w-full px-4 py-2 bg-white/5 border border-white/20 rounded-lg text-white"
+                  required
+                />
+              </div>
+              <div>
+                <label htmlFor="email" className="block mb-2 text-white">
+                  {t('contact.email')}
                 </label>
                 <input
                   type="email"
                   id="email"
-                  className="mt-1 w-full border-b-2 border-gray-300 focus:outline-none focus:border-[#E6A97D] py-2 px-4"
-                  placeholder="Enter your email"
-                  value={email}
-                  onChange={e => setEmail(e.target.value)}
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  className="w-full px-4 py-2 bg-white/5 border border-white/20 rounded-lg text-white"
                   required
                 />
               </div>
-
-              <div>
-                <label
-                  htmlFor="message"
-                  className="block text-sm font-medium text-brown-600"
-                >
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  className="mt-1 w-full border-b-2 border-gray-300 focus:outline-none focus:border-[#E6A97D] py-2 px-4"
-                  placeholder="Write your message.."
-                  value={message}
-                  onChange={e => setMessage(e.target.value)}
-                  rows={4}
-                  required
-                />
-              </div>
-
-              <button
-                type="submit"
-                className="w-full md:w-auto bg-black text-white px-6 py-3 rounded-full font-semibold hover:bg-gray-800 transition-all duration-300"
-              >
-                Ask the question
-              </button>
-            </form>
-          </div>
-
-          {/* Right Section: Phone Mockup */}
-          <div className="hidden md:flex justify-center items-center">
-            <div className="relative w-60 h-[420px]">
-              {/* Insert the phone mockup image here */}
-              <Image
-                src="/images/phone-dashboard.png" // Update the path to your image
-                alt="Mobile Dashboard"
-                layout="fill"
-                objectFit="contain"
+            </div>
+            <div>
+              <label htmlFor="subject" className="block mb-2 text-white">
+                {t('contact.subject')}
+              </label>
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                value={formData.subject}
+                onChange={handleChange}
+                className="w-full px-4 py-2 bg-white/5 border border-white/20 rounded-lg text-white"
+                required
               />
             </div>
-          </div>
+            <div>
+              <label htmlFor="message" className="block mb-2 text-white">
+                {t('contact.message')}
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                rows={4}
+                className="w-full px-4 py-2 bg-white/5 border border-white/20 rounded-lg text-white"
+                required
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              className="px-6 py-3 bg-[#ECAB88] text-white font-medium rounded-lg hover:bg-[#d99b78] transition-colors"
+            >
+              {t('contact.submit')}
+            </button>
+          </form>
         </div>
       </div>
-    </div>
+    </motion.section>
   );
-};
-
-export default ContactPage;
+}

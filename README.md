@@ -1,36 +1,125 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Braidery Website
+
+A modern, responsive website for Braidery - The Ultimate Hair Care Companion.
+
+## Features
+
+- Responsive design for all devices
+- Modern UI with animations
+- Multilingual support (English, Norwegian, French)
+- Contact form
+- Back to top button
+- Scroll-aware header
+
+## Multilingual Support
+
+The website supports multiple languages through a language context provider. Currently, the following languages are supported:
+
+- English (en)
+- Norwegian (no)
+- French (fr)
+
+### How to Use
+
+1. The language switcher is located in the navigation bar.
+2. Click on the language switcher to see available languages.
+3. Select your preferred language to change the website content.
+
+### How to Add a New Language
+
+To add a new language:
+
+1. Open `src/utils/LanguageContext.tsx`
+2. Add the new language code to the `Language` type:
+   ```typescript
+   export type Language = 'en' | 'no' | 'fr' | 'your-language-code';
+   ```
+3. Add translations for the new language in the `translations` object:
+   ```typescript
+   'your-language-code': {
+     'nav.about': 'Your translation',
+     // Add all other translations
+   }
+   ```
+
+### How to Add New Translation Keys
+
+To add new translation keys:
+
+1. Open `src/utils/LanguageContext.tsx`
+2. Add the new key and its translations to each language section:
+   ```typescript
+   en: {
+     'your.new.key': 'English translation',
+     // existing translations
+   },
+   no: {
+     'your.new.key': 'Norwegian translation',
+     // existing translations
+   },
+   fr: {
+     'your.new.key': 'French translation',
+     // existing translations
+   }
+   ```
+3. Use the new key in your components with the `t` function:
+   ```typescript
+   const { t } = useLanguage();
+   // ...
+   <p>{t('your.new.key')}</p>
+   ```
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
+- Node.js (v14 or later)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository
+
+   ```
+   git clone https://github.com/yourusername/braidery-website.git
+   cd braidery-website
+   ```
+
+2. Install dependencies
+
+   ```
+   npm install
+   # or
+   yarn install
+   ```
+
+3. Start the development server
+
+   ```
+   npm run dev
+   # or
+   yarn dev
+   ```
+
+4. Open [http://localhost:3000](http://localhost:3000) in your browser to see the website.
+
+## Building for Production
+
+```
+npm run build
 # or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+yarn build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Deployment
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The website can be deployed to any static hosting service like Vercel, Netlify, or GitHub Pages.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Technologies Used
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+- Firebase (for contact form)

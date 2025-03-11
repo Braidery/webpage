@@ -57,9 +57,9 @@ const ContactPage = () => {
   };
 
   return (
-    <div className="hero min-h-screen flex items-center justify-center">
-      <div className="container mx-auto px-6 md:pt-20">
-        <div className="flex gap-[10rem] md:mt-12">
+    <div className="min-h-screen flex items-center justify-center">
+      <div className="container mx-auto px-6 md:pt-2">
+        <div className="flex gap-[10rem] md:mt-2">
           {/* Left Section */}
           <div className="space-y-6">
             <h1 className="text-[40px] md:text-[64px] font-extrabold text-[#E6A97D]">
@@ -79,7 +79,7 @@ const ContactPage = () => {
               <div>
                 <label
                   htmlFor="email"
-                  className="block text-sm font-medium text-[#8D8D8D]"
+                  className="block text-sm font-medium text-[#17151D]"
                 >
                   Email
                 </label>
@@ -98,7 +98,7 @@ const ContactPage = () => {
               <div>
                 <label
                   htmlFor="message"
-                  className="block text-sm font-medium text-[#8D8D8D]"
+                  className="block text-sm font-medium text-[#17151D]"
                 >
                   Message
                 </label>

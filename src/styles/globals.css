@@ -5,23 +5,39 @@
 
 body {
   font-family: var(--font-poppins), sans-serif;
+  overflow-x: hidden; /* Hide horizontal scrollbar */
 }
 html,
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background: linear-gradient(to left, #fff6e5, #fff7e9, #ffffff);
+  background: linear-gradient(
+    to bottom,
+    #3a6b6e,
+    #5e8578,
+    #8a8a6e,
+    #b99b7c,
+    #d9ad8c
+  );
+  background-attachment: fixed;
+  background-size: cover;
+  min-height: 100vh;
+  color: #fff;
+  width: 100%;
+  overflow-x: hidden; /* Hide horizontal scrollbar */
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+  width: 100%;
 }
 
 section {
   padding: 50px 0;
+  width: 100%;
 }
 
 @media (min-width: 768px) {
@@ -30,8 +46,13 @@ section {
   }
 }
 
-.hero {
-  background: linear-gradient(to left, #fff6e5, #fff7e9, #ffffff);
+/* Hide scrollbar for Chrome, Safari and Opera */
+::-webkit-scrollbar {
+  display: none;
 }
-.about {
+
+/* Hide scrollbar for IE, Edge and Firefox */
+html {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }

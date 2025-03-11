@@ -1,9 +1,21 @@
 'use client';
 import Image from 'next/image';
-import { motion, Variants } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { sectionVariants } from '@/utils/animation';
+import { useLanguage } from '@/utils/LanguageContext';
 
 export default function WhyBraidery() {
+  const { t } = useLanguage();
+
+  const features = [
+    { id: 1, key: 'why.feature1' },
+    { id: 2, key: 'why.feature2' },
+    { id: 3, key: 'why.feature3' },
+    { id: 4, key: 'why.feature4' },
+    { id: 5, key: 'why.feature5' },
+    { id: 6, key: 'why.feature6' }
+  ];
+
   return (
     <motion.section
       id="service"
@@ -11,60 +23,46 @@ export default function WhyBraidery() {
       whileInView="visible"
       variants={sectionVariants}
       viewport={{ once: true, amount: 0.3 }}
-      className="md:max-w-[1350px] mx-auto px-6 md:px-12"
+      className="py-16 md:py-24"
     >
-      <div className="mb-6">
-        <h2 className=" text-[30px] md:text-[70px] font-bold mb-6">
-          Why <span className="text-[#E6A97D]">BRAIDERY</span> ?
-        </h2>
-        <p className="text-[#18181B] md:text-[36px] font-extralight mb-8">
-          Braidery helps you build a fun, personalized hair regimen with the
-          power of AI, guiding you step by step to reach your hair goals.
-          Whether it’s tracking progress, recommending products, or offering
-          quick style tips, Braidery makes managing your hair enjoyable and
-          easy. Plus, with seamless braider bookings and automatic product
-          refills, your hair routine is always on track and hassle-free!
-        </p>
-      </div>
-      <div className="grid lg:grid-cols-2 max-w-6xl mx-auto">
-        <div className="flex justify-center items-center">
-          <ul className="space-y-4 text-left justi">
-            {[
-              'Find professional braiders and salons nearby',
-              'Try New Styles',
-              'AI Powered Recommendations',
-              'Hair Routine Management',
-              'Showcase for Braiders',
-              'Small Business Integration'
-            ].map((item, index) => (
-              <li key={index} className="flex gap-6 text-gray-800 items-center">
-                <div className="">
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    height="2em"
-                    width="2em"
-                    className="text-[#E6A97D]"
-                  >
-                    <path d="M19 3H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2V5c0-1.103-.897-2-2-2zm-7.933 13.481l-3.774-3.774 1.414-1.414 2.226 2.226 4.299-5.159 1.537 1.28-5.702 6.841z" />
-                  </svg>
-                </div>
-                <div className="md:text-[26px] font-thin">{item}</div>
-              </li>
-            ))}
-          </ul>
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+            {t('why.title')}{' '}
+            <span className="text-[#ECAB88]">{t('why.titleHighlight')}</span>
+          </h2>
+          <p className="text-white max-w-2xl mx-auto">{t('why.description')}</p>
         </div>
-        <div className="md:block hidden">
-          <Image
-            src="/welcome.jpeg"
-            alt="App feature"
-            width={340}
-            height={100}
-            className="mx-auto"
-          />
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {features.map(feature => (
+            <div
+              key={feature.id}
+              className="bg-white/10 backdrop-blur-sm p-6 rounded-lg flex items-start"
+            >
+              <div className="mr-4 text-[#ECAB88]">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+              </div>
+              <div>
+                <p className="text-white">{t(feature.key)}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
-      <div className="md:block hidden"></div>
     </motion.section>
   );
 }
