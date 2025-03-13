@@ -34,7 +34,7 @@ const translations: Translations = {
     'about.title': "What's",
     'about.titleHighlight': 'BRAIDERY',
     'about.description':
-      'BRAIDERY is a comprehensive hair care platform designed to connect individuals with expert braiders and hair care professionals, while also providing personalized hair care recommendations and tools. It is a one-stop solution for everything hair-related.',
+      'Braidery is a next-generation hair care platform that uses AI and blockchain to track your hair journey—like a medical record—while helping you find stylists and hair enthusiasts near you. Easily request quotes, discover personalized product recommendations, and let vendors sell products and manage their services—all in one secure, integrated system.',
 
     // Features section
     'features.title': 'Amazing',
@@ -179,7 +179,7 @@ const translations: Translations = {
     'about.title': 'Hva er',
     'about.titleHighlight': 'BRAIDERY',
     'about.description':
-      'BRAIDERY er en omfattende hårpleieplattform designet for å koble enkeltpersoner med ekspertflettere og hårpleiefagfolk, samtidig som den gir personlige hårpleieråd og verktøy. Det er en alt-i-ett-løsning for alt hårrelatert.',
+      'Braidery er en neste generasjons hårpleieplattform som bruker AI og blokkjede for å spore din hårreise—som en medisinsk journal—samtidig som den hjelper deg med å finne frisører og hårentusiaster i nærheten. Be enkelt om pristilbud, oppdag personlige produktanbefalinger, og la leverandører selge produkter og administrere tjenestene sine—alt i ett sikkert og integrert system.',
 
     // Features section
     'features.title': 'Fantastiske',
@@ -326,7 +326,7 @@ const translations: Translations = {
     'about.title': "Qu'est-ce que",
     'about.titleHighlight': 'BRAIDERY',
     'about.description':
-      "BRAIDERY est une plateforme complète de soins capillaires conçue pour connecter les individus avec des tresseurs experts et des professionnels des soins capillaires, tout en fournissant des recommandations et des outils de soins capillaires personnalisés. C'est une solution tout-en-un pour tout ce qui concerne les cheveux.",
+      "Braidery est une plateforme de soins capillaires nouvelle génération qui utilise l'IA et la blockchain pour suivre votre parcours capillaire—comme un dossier médical—tout en vous aidant à trouver des coiffeurs et des passionnés de cheveux près de chez vous. Demandez facilement des devis, découvrez des recommandations de produits personnalisées et laissez les vendeurs proposer leurs produits et gérer leurs services—le tout dans un système sécurisé et intégré.",
 
     // Features section
     'features.title': 'Fonctionnalités',
