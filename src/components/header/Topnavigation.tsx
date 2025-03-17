@@ -69,7 +69,7 @@ const NavBar = () => {
         visible ? 'translate-y-0' : '-translate-y-full'
       } w-full z-50 fixed transition-all duration-300`}
     >
-      <nav className="flex flex-col md:flex-row max-w-[1350px] mx-auto justify-between items-center px-3 py-4 md:px-7 md:py-4">
+      <nav className="flex flex-col md:flex-row max-w-[1350px] w-full mx-auto justify-between items-center px-3 py-4 md:px-7 md:py-4">
         {/* Logo */}
         <div className="flex justify-between items-center w-full md:w-auto">
           <Link href="/" className="flex items-center">
@@ -81,6 +81,10 @@ const NavBar = () => {
               height={50}
             />
           </Link>
+          {/* Right Side - Language Switcher & Ask Button */}
+          <div className="block mt-4 md:mt-0 md:hidden">
+            <LanguageSwitcher />
+          </div>
           {/* Hamburger Icon for Mobile */}
           <button className="md:hidden block text-white" onClick={toggleMenu}>
             {/* Hamburger icon */}
@@ -104,7 +108,7 @@ const NavBar = () => {
         {/* Left Side - Navigation Links */}
         <ul
           className={`${
-            isOpen ? 'flex' : 'hidden'
+            isOpen ? 'flex p-4 w-full ' : 'hidden md:flex'
           } z-50 bg-white/10 backdrop-blur-sm md:bg-transparent flex-col md:flex md:flex-row space-y-4 md:space-y-0 md:space-x-8 mt-4 md:mt-0`}
         >
           <li>
@@ -158,7 +162,9 @@ const NavBar = () => {
         </ul>
 
         <div className="flex items-center space-x-4 mt-4 md:mt-0">
-          <LanguageSwitcher />
+          <div className="hidden md:block">
+            <LanguageSwitcher />
+          </div>
           {/* Ask a Question navigates to /contact */}
           <button
             onClick={() => handleNavigation('contact')}

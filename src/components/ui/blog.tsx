@@ -24,7 +24,7 @@ const Blog = () => {
       titleKey: 'blog.post1.title',
       excerptKey: 'blog.post1.excerpt',
       dateKey: 'blog.post1.date',
-      image: '/1.png', // Using existing image from public directory
+      image: '/1.png',
       link: '#'
     },
     {
@@ -32,7 +32,7 @@ const Blog = () => {
       titleKey: 'blog.post2.title',
       excerptKey: 'blog.post2.excerpt',
       dateKey: 'blog.post2.date',
-      image: '/2.png', // Using existing image from public directory
+      image: '/2.png',
       link: '#'
     },
     {
@@ -40,7 +40,7 @@ const Blog = () => {
       titleKey: 'blog.post3.title',
       excerptKey: 'blog.post3.excerpt',
       dateKey: 'blog.post3.date',
-      image: '/3.png', // Using existing image from public directory
+      image: '/3.png',
       link: '#'
     }
   ];
